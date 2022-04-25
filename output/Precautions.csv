@@ -1,0 +1,12 @@
+Code,Count,Statement,Assoc.CAS,Assoc.Chemical
+P210,1,Keep away from heat/sparks/open flames/hot surfaces. No smoking.,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P233,1,Keep container tightly closed.,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P301,1,IF SWALLOWED:,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P312,1,Call a POISON CENTER or doctor/physician if you feel unwell.,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P303,1,IF ON SKIN (or hair):,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P361,1,Remove/Take off immediately all contaminated clothing.,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P353,1,Rinse skin with water/shower.,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P305,1,IF IN EYES:,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P351,1,Rinse cautiously with water for several minutes.,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P338,1,"Remove contact lenses, if present and easy to do. Continue rinsing.",['21324-40-3'],['Lithium hexafluorophosphate solution']
+P314,1,Get medical advice/attention if you feel unwell.,['21324-40-3'],['Lithium hexafluorophosphate solution']

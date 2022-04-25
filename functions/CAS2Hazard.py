@@ -1,4 +1,11 @@
-def run(chemicals_df,export_dir):
+"""
+Created on Thu Jun 23 17:17:45 2016
+@author: Arnaud Devie
+
+Modified on Mon April 25 by Andrew A. Wang
+"""
+
+def run(CAS_list,export_dir):
     '''
     chemicals_df: df with "name","cas","url" for the sigma aldrich product site
     export_dir: folder to save dataframe exports
@@ -124,29 +131,43 @@ def run(chemicals_df,export_dir):
     #==============================================================================
     # Make Chemicals Dictionary with Safety Codes
     #==============================================================================
-        
-        
-    # CSV with chemicals
-#     df = pandas.read_csv(csv_file)
-    df = chemicals_df
+
 
     # Initialize
     chemicals=list()
     CASdict = dict()
-
-    for index, row in df.iterrows():
+    for CAS in CAS_list:
+        CAS = str(CAS)
         chemical = dict()
+        
+        # SEARCHING SIGMA ALDRICH        
         #******************************
-        Name = row['name']
-        CAS = row['cas']
-        sigmaURL = row['url']
-        ProductNumber = sigmaURL.split('/')[-1] #Sigma Product Number
+        searchURL = r'http://www.sigmaaldrich.com/catalog/search?interface=CAS%20No.&term=[INSERT-HERE]&N=0&lang=en&region=US&focus=product&mode=mode+matchall'.replace('[INSERT-HERE]',CAS)
+        webpage = requests.get(searchURL,headers=header)
+        soup = BeautifulSoup(webpage.content, "html.parser") 
+        links_to_search_results = str(soup.findAll("a"))
+        Sigma_Tuple_List = list(re.findall('''(?<=(href="/GB/en/product/aldrich/))(.*?)(?=("))''',links_to_search_results))
+        ProductNumber = list(Sigma_Tuple_List[0])[1] #CHOOSES THE SIGMA NUMBER THAT TURNS UP FIRST IN THE SEARCH
+        # Sigma_List = list()
+        # for t in Sigma_Tuple_List:
+        #     num = list(t)[1]
+        #     # print(num)
+        #     Sigma_List.append(num)
+        # ProductNumber = Sigma_List[0] 
+        # ProductNumber = list(set(Sigma_List))[0] #CHOOSES THE SIGMA NUMBER THAT IS THE LOWEST IN THE SET
+        
+        sigmaURL = "https://www.sigmaaldrich.com/GB/en/product/aldrich/" + ProductNumber
+        webpage = requests.get(sigmaURL,headers=header)
+        soup = BeautifulSoup(webpage.content, "html.parser")
+        
+        Name = clean(str(soup.findAll("span", id="product-name"))).lstrip('[').rstrip(']')
         sdspdf_url = 'https://www.sigmaaldrich.com/GB/en/sds/sial/' + ProductNumber #SDS URL
         #******************************
         chemical['CAS'] = CAS
         chemical['Name'] = Name
         chemical['ProductNumber'] = ProductNumber
-
+        chemical['sigmaURL'] = sigmaURL
+        chemical['sds'] = sdspdf_url
         #Get website
         webpage = requests.get(sigmaURL,headers=header)
         soup = BeautifulSoup(webpage.content, "html.parser") 
@@ -197,7 +218,7 @@ def run(chemicals_df,export_dir):
         # Store chemical
         chemicals.append(chemical)
     # Display
-    print('Processed %d chemicals out of %d CAS numbers received' % (len(chemicals),len(df)))
+    print('Processed %d chemicals out of %d CAS numbers received' % (len(chemicals),len(CAS_list)))
     
     #%% Post processing
     #==============================================================================
