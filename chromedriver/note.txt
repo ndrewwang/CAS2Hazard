@@ -1,0 +1,3 @@
+Put the right chromedriver file here to match your OS platform and version of Chrome:
+
+https://sites.google.com/chromium.org/driver/home?authuser=0
