@@ -105,6 +105,7 @@ P304 + P340 IF INHALED: Remove victim to fresh air and Keep at rest in a positio
 P304 + P341 IF INHALED: If breathing is difficult, remove victim to fresh air and keep at rest in a position comfortable for breathing.
 P305 + P351 + P338 IF IN EYES: Rinse cautiously with water for several minutes. Remove contact lenses, if present and easy to do. Continue rinsing.
 P305 + P351 + P338 + P310 IF IN EYES: Rinse cautiously with water for several minutes. Remove contact lenses, if present and easy to do. Continue rinsing. Immediately call a POISON CENTER/doctor.
+P364	And wash it before reuse.[Added in 2015 version]
 P306 + P360 IF ON CLOTHING: Rinse Immediately contaminated CLOTHING and SKIN with plenty of water before removing clothes.
 P307 + P311 IF exposed: call a POISON CENTER or doctor/physician.
 P308 + P313 IF exposed or concerned: Get medical advice/attention.

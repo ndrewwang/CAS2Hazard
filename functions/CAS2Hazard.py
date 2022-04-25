@@ -1,6 +1,6 @@
-def run(csv_file,export_dir):
+def run(chemicals_df,export_dir):
     '''
-    csv_file: csv with "name","cas","url" for the sigma aldrich product site
+    chemicals_df: df with "name","cas","url" for the sigma aldrich product site
     export_dir: folder to save dataframe exports
     '''
     #==============================================================================
@@ -127,7 +127,8 @@ def run(csv_file,export_dir):
         
         
     # CSV with chemicals
-    df = pandas.read_csv(csv_file)
+#     df = pandas.read_csv(csv_file)
+    df = chemicals_df
 
     # Initialize
     chemicals=list()
@@ -375,4 +376,4 @@ def run(csv_file,export_dir):
     Punique.to_csv(export_dir + 'Precautions.csv',index=False)
     PPEunique.to_csv(export_dir + 'PPE.csv',index=False)
     
-    return
+    return chemicalsDF, Hunique, Punique, PPEunique

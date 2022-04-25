@@ -1,0 +1,19 @@
+Code,Count,Statement,Assoc.CAS,Assoc.Chemical
+P210,2,Keep away from heat/sparks/open flames/hot surfaces. No smoking.,"['623-53-0', '67-63-0']","['Ethyl methyl carbonate', 'Isopropanol']"
+P233,2,Keep container tightly closed.,"['623-53-0', '67-63-0']","['Ethyl methyl carbonate', 'Isopropanol']"
+P240,2,Ground/bond container and receiving equipment.,"['623-53-0', '67-63-0']","['Ethyl methyl carbonate', 'Isopropanol']"
+P241,2,Use explosion-proof electrical/ventilating/lighting/.../equipment.,"['623-53-0', '67-63-0']","['Ethyl methyl carbonate', 'Isopropanol']"
+P242,2,Use only non-sparking tools.,"['623-53-0', '67-63-0']","['Ethyl methyl carbonate', 'Isopropanol']"
+P305,2,IF IN EYES:,"['21324-40-3', '67-63-0']","['Isopropanol', 'Lithium hexafluorophosphate']"
+P351,2,Rinse cautiously with water for several minutes.,"['21324-40-3', '67-63-0']","['Isopropanol', 'Lithium hexafluorophosphate']"
+P338,2,"Remove contact lenses, if present and easy to do. Continue rinsing.","['21324-40-3', '67-63-0']","['Isopropanol', 'Lithium hexafluorophosphate']"
+P260,1,Do not breathe dust/fume/gas/mist/vapors/spray.,['21324-40-3'],['Lithium hexafluorophosphate']
+P280,1,Wear protective gloves/protective clothing/eye protection/face protection.,['21324-40-3'],['Lithium hexafluorophosphate']
+P303,1,IF ON SKIN (or hair):,['21324-40-3'],['Lithium hexafluorophosphate']
+P361,1,Remove/Take off immediately all contaminated clothing.,['21324-40-3'],['Lithium hexafluorophosphate']
+P353,1,Rinse skin with water/shower.,['21324-40-3'],['Lithium hexafluorophosphate']
+P304,1,IF INHALED:,['21324-40-3'],['Lithium hexafluorophosphate']
+P340,1,Remove victim to fresh air and keep at rest in a position comfortable for breathing.,['21324-40-3'],['Lithium hexafluorophosphate']
+P310,1,Immediately call a POISON CENTER or doctor/physician.,['21324-40-3'],['Lithium hexafluorophosphate']
+P314,1,Get medical advice/attention if you feel unwell.,['21324-40-3'],['Lithium hexafluorophosphate']
+P243,1,Take precautionary measures against static discharge.,['623-53-0'],['Ethyl methyl carbonate']

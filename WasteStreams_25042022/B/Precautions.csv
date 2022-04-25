@@ -1,0 +1,27 @@
+Code,Count,Statement,Assoc.CAS,Assoc.Chemical
+P301,6,IF SWALLOWED:,"['13476-99-8', '366-18-7', '429-06-1', '60-29-7', '75-05-8', '75-75-2']","['2,2′-bipyridine', 'Acetonitrile', 'Diethyl ether', 'Iron methanesulfonate', 'Tetraethylammonium tetrafluoroborate', 'Vanadium acetylacetonate']"
+P310,2,Immediately call a POISON CENTER or doctor/physician.,"['13476-99-8', '366-18-7']","['2,2′-bipyridine', 'Vanadium acetylacetonate']"
+P330,1,Rinse mouth.,['13476-99-8'],['Vanadium acetylacetonate']
+P302,3,IF ON SKIN:,"['13476-99-8', '366-18-7', '429-06-1']","['2,2′-bipyridine', 'Tetraethylammonium tetrafluoroborate', 'Vanadium acetylacetonate']"
+P352,3,Wash with plenty of soap and water.,"['13476-99-8', '366-18-7', '429-06-1']","['2,2′-bipyridine', 'Tetraethylammonium tetrafluoroborate', 'Vanadium acetylacetonate']"
+P305,6,IF IN EYES:,"['13476-99-8', '429-06-1', '67-63-0', '67-64-1', '75-05-8', '75-75-2']","['Acetone', 'Acetonitrile', 'Iron methanesulfonate', 'Isopropanol', 'Tetraethylammonium tetrafluoroborate', 'Vanadium acetylacetonate']"
+P351,6,Rinse cautiously with water for several minutes.,"['13476-99-8', '429-06-1', '67-63-0', '67-64-1', '75-05-8', '75-75-2']","['Acetone', 'Acetonitrile', 'Iron methanesulfonate', 'Isopropanol', 'Tetraethylammonium tetrafluoroborate', 'Vanadium acetylacetonate']"
+P338,6,"Remove contact lenses, if present and easy to do. Continue rinsing.","['13476-99-8', '429-06-1', '67-63-0', '67-64-1', '75-05-8', '75-75-2']","['Acetone', 'Acetonitrile', 'Iron methanesulfonate', 'Isopropanol', 'Tetraethylammonium tetrafluoroborate', 'Vanadium acetylacetonate']"
+P261,2,Avoid breathing dust/fume/gas/mist/vapors/spray.,"['429-06-1', '75-75-2']","['Iron methanesulfonate', 'Tetraethylammonium tetrafluoroborate']"
+P280,4,Wear protective gloves/protective clothing/eye protection/face protection.,"['366-18-7', '429-06-1', '75-05-8', '75-75-2']","['2,2′-bipyridine', 'Acetonitrile', 'Iron methanesulfonate', 'Tetraethylammonium tetrafluoroborate']"
+P312,5,Call a POISON CENTER or doctor/physician if you feel unwell.,"['366-18-7', '429-06-1', '60-29-7', '75-05-8', '75-75-2']","['2,2′-bipyridine', 'Acetonitrile', 'Diethyl ether', 'Iron methanesulfonate', 'Tetraethylammonium tetrafluoroborate']"
+P304,2,IF INHALED:,"['429-06-1', '75-05-8']","['Acetonitrile', 'Tetraethylammonium tetrafluoroborate']"
+P340,2,Remove victim to fresh air and keep at rest in a position comfortable for breathing.,"['429-06-1', '75-05-8']","['Acetonitrile', 'Tetraethylammonium tetrafluoroborate']"
+P234,1,Keep only in original container.,['75-75-2'],['Iron methanesulfonate']
+P303,2,IF ON SKIN (or hair):,"['75-05-8', '75-75-2']","['Acetonitrile', 'Iron methanesulfonate']"
+P361,3,Remove/Take off immediately all contaminated clothing.,"['366-18-7', '75-05-8', '75-75-2']","['2,2′-bipyridine', 'Acetonitrile', 'Iron methanesulfonate']"
+P353,2,Rinse skin with water/shower.,"['75-05-8', '75-75-2']","['Acetonitrile', 'Iron methanesulfonate']"
+P264,1,Wash skin thoroughly after handling.,['366-18-7'],"['2,2′-bipyridine']"
+P270,1,"Do not eat, drink or smoke when using this product.",['366-18-7'],"['2,2′-bipyridine']"
+P364,1,And wash it before reuse.[Added in 2015 version],['366-18-7'],"['2,2′-bipyridine']"
+P210,4,Keep away from heat/sparks/open flames/hot surfaces. No smoking.,"['60-29-7', '67-63-0', '67-64-1', '75-05-8']","['Acetone', 'Acetonitrile', 'Diethyl ether', 'Isopropanol']"
+P233,3,Keep container tightly closed.,"['60-29-7', '67-63-0', '67-64-1']","['Acetone', 'Diethyl ether', 'Isopropanol']"
+P240,3,Ground/bond container and receiving equipment.,"['60-29-7', '67-63-0', '67-64-1']","['Acetone', 'Diethyl ether', 'Isopropanol']"
+P241,3,Use explosion-proof electrical/ventilating/lighting/.../equipment.,"['60-29-7', '67-63-0', '67-64-1']","['Acetone', 'Diethyl ether', 'Isopropanol']"
+P242,2,Use only non-sparking tools.,"['67-63-0', '67-64-1']","['Acetone', 'Isopropanol']"
+P403,1,Store in a well-ventilated place.,['60-29-7'],['Diethyl ether']
