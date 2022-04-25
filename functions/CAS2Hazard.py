@@ -5,11 +5,14 @@ Created on Thu Jun 23 17:17:45 2016
 Modified on Mon April 25 by Andrew A. Wang
 """
 
-def run(CAS_list,export_dir):
+def run(**kwargs):
     '''
-    chemicals_df: df with "name","cas","url" for the sigma aldrich product site
+    **kwargs -> 
+    CAS_list: python list of CAS numbers
     export_dir: folder to save dataframe exports
     '''
+        
+        
     #==============================================================================
     # Libraries
     #==============================================================================
@@ -23,6 +26,24 @@ def run(CAS_list,export_dir):
     import ghs_hazard_pictogram
     import requests
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'} 
+    
+    
+    
+    #==============================================================================
+    # Initial input KWARGS
+    #==============================================================================
+    try:
+        CAS_list = kwargs['CAS_list']
+    except KeyError:
+        print('Error: No valid CAS list provided with "CAS_list = CAS_list"')
+        
+    if "export_dir" in kwargs.keys():
+        export_dir = kwargs['export_dir']
+    else:
+        export_dir = os.getcwd() + '/'
+        print('Files exporting to: ' + export_dir)
+        
+        
     #==============================================================================
     # Functions
     #==============================================================================
@@ -142,12 +163,19 @@ def run(CAS_list,export_dir):
         
         # SEARCHING SIGMA ALDRICH        
         #******************************
+        #@SigmaAldrich
         searchURL = r'http://www.sigmaaldrich.com/catalog/search?interface=CAS%20No.&term=[INSERT-HERE]&N=0&lang=en&region=US&focus=product&mode=mode+matchall'.replace('[INSERT-HERE]',CAS)
+        
         webpage = requests.get(searchURL,headers=header)
-        soup = BeautifulSoup(webpage.content, "html.parser") 
+        soup = BeautifulSoup(webpage.content, "html.parser")
         links_to_search_results = str(soup.findAll("a"))
-        Sigma_Tuple_List = list(re.findall('''(?<=(href="/GB/en/product/aldrich/))(.*?)(?=("))''',links_to_search_results))
-        ProductNumber = list(Sigma_Tuple_List[0])[1] #CHOOSES THE SIGMA NUMBER THAT TURNS UP FIRST IN THE SEARCH
+        
+        #ALL SIGMA ALDRICH BRANDS:
+        Tuple_List = list(re.findall('''(?<=(href="/GB/en/product/))(.*?)(?=("))''',links_to_search_results)) #@SigmaAldrich #Order here matters
+        Tuple_List = [item for sublist in Tuple_List  for item in sublist] #combine sublists
+        print(Tuple_List)
+        SigmaBrand = Tuple_List[1].split('/')[0] #@SigmaAldrich
+        ProductNumber = Tuple_List[1].split('/')[1] #@SigmaAldrich
         # Sigma_List = list()
         # for t in Sigma_Tuple_List:
         #     num = list(t)[1]
@@ -156,12 +184,12 @@ def run(CAS_list,export_dir):
         # ProductNumber = Sigma_List[0] 
         # ProductNumber = list(set(Sigma_List))[0] #CHOOSES THE SIGMA NUMBER THAT IS THE LOWEST IN THE SET
         
-        sigmaURL = "https://www.sigmaaldrich.com/GB/en/product/aldrich/" + ProductNumber
+        sigmaURL = "https://www.sigmaaldrich.com/GB/en/product/" + SigmaBrand + "/" + ProductNumber #@SigmaAldrich
         webpage = requests.get(sigmaURL,headers=header)
         soup = BeautifulSoup(webpage.content, "html.parser")
-        
-        Name = clean(str(soup.findAll("span", id="product-name"))).lstrip('[').rstrip(']')
-        sdspdf_url = 'https://www.sigmaaldrich.com/GB/en/sds/sial/' + ProductNumber #SDS URL
+        html_name = str(soup.findAll("span", id="product-name"))
+        Name = clean(html_name).lstrip('[').rstrip(']') #@SigmaAldrich
+        sdspdf_url = 'https://www.sigmaaldrich.com/GB/en/sds/sial/' + ProductNumber #@SigmaAldrich
         #******************************
         chemical['CAS'] = CAS
         chemical['Name'] = Name
@@ -171,7 +199,7 @@ def run(CAS_list,export_dir):
         #Get website
         webpage = requests.get(sigmaURL,headers=header)
         soup = BeautifulSoup(webpage.content, "html.parser") 
-        multigrid_info = soup.find_all("div",class_="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3") #INSPECT ELEMENT OF "SAFETY INFORMATION" TO UPDATE
+        multigrid_info = soup.find_all("div",class_="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3") #INSPECT ELEMENT OF "SAFETY INFORMATION" TO UPDATE #@SigmaAldrich
 
         #Get key safety info
         for i,item in enumerate(multigrid_info):
@@ -201,7 +229,7 @@ def run(CAS_list,export_dir):
                 PPE = []
                 for ppe in list(item.find('p').children):
                     if '</a>' in str(ppe):
-                        ppe_str = list(re.findall("(?<=>)(.*?)(?=(</a>))",str(ppe))[0])[0]
+                        ppe_str = list(re.findall("(?<=>)(.*?)(?=(</a>))",str(ppe))[0])[0] #@SigmaAldrich
                         PPE.append(ppe_str)
                     elif len(str(ppe)) > 1:
                         ppe_str = str(ppe)
@@ -217,6 +245,7 @@ def run(CAS_list,export_dir):
 
         # Store chemical
         chemicals.append(chemical)
+        print('Added: ' + CAS)
     # Display
     print('Processed %d chemicals out of %d CAS numbers received' % (len(chemicals),len(CAS_list)))
     
@@ -343,11 +372,13 @@ def run(CAS_list,export_dir):
     # Create a dataframe with a list of unique P-statements
     P = pandas.DataFrame(Plist, columns = {'Code'})
     Punique = P[P.Code!=''].drop_duplicates()
-
     codes = Punique['Code']
     for code in codes:
         statements = [' '.join([Pstatements[solo] for solo in re.findall(soloPpattern,code)]) for code in Punique['Code']]
-    Precautions = dict(zip(codes, statements))
+    if list(codes): #If there are actually codes to match:
+        Precautions = dict(zip(codes, statements))
+    else:
+        Precautions = dict() #Empty codes
 
     Punique['Count']            = Punique['Code'].map(Pdict)
     Punique['Statement']        = Punique['Code'].map(Precautions)

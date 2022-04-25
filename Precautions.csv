@@ -1,0 +1,31 @@
+Code,Count,Statement,Assoc.CAS,Assoc.Chemical
+P260,3,Do not breathe dust/fume/gas/mist/vapors/spray.,"['7439-93-2', '7722-64-7', '90076-65-6']","['Bis(trifluoromethane)sulfonimide lithium salt', 'Lithium', 'Potassium permanganate']"
+P273,3,Avoid release to the environment.,"['7722-64-7', '7722-84-1', '90076-65-6']","['Bis(trifluoromethane)sulfonimide lithium salt', 'Hydrogen peroxide solution', 'Potassium permanganate']"
+P280,6,Wear protective gloves/protective clothing/eye protection/face protection.,"['108-32-7', '7439-93-2', '7664-93-9', '7722-64-7', '7722-84-1', '90076-65-6']","['Bis(trifluoromethane)sulfonimide lithium salt', 'Hydrogen peroxide solution', 'Lithium', 'Potassium permanganate', 'Propylene carbonate', 'Sulfuric acid']"
+P303,5,IF ON SKIN (or hair):,"['21324-40-3', '7439-93-2', '7664-93-9', '7722-64-7', '90076-65-6']","['Bis(trifluoromethane)sulfonimide lithium salt', 'Lithium', 'Lithium hexafluorophosphate solution', 'Potassium permanganate', 'Sulfuric acid']"
+P361,5,Remove/Take off immediately all contaminated clothing.,"['21324-40-3', '7439-93-2', '7664-93-9', '7722-64-7', '90076-65-6']","['Bis(trifluoromethane)sulfonimide lithium salt', 'Lithium', 'Lithium hexafluorophosphate solution', 'Potassium permanganate', 'Sulfuric acid']"
+P353,5,Rinse skin with water/shower.,"['21324-40-3', '7439-93-2', '7664-93-9', '7722-64-7', '90076-65-6']","['Bis(trifluoromethane)sulfonimide lithium salt', 'Lithium', 'Lithium hexafluorophosphate solution', 'Potassium permanganate', 'Sulfuric acid']"
+P304,2,IF INHALED:,"['7664-93-9', '90076-65-6']","['Bis(trifluoromethane)sulfonimide lithium salt', 'Sulfuric acid']"
+P340,2,Remove victim to fresh air and keep at rest in a position comfortable for breathing.,"['7664-93-9', '90076-65-6']","['Bis(trifluoromethane)sulfonimide lithium salt', 'Sulfuric acid']"
+P310,2,Immediately call a POISON CENTER or doctor/physician.,"['7664-93-9', '90076-65-6']","['Bis(trifluoromethane)sulfonimide lithium salt', 'Sulfuric acid']"
+P305,9,IF IN EYES:,"['108-32-7', '21324-40-3', '67-63-0', '67-64-1', '7439-93-2', '7664-93-9', '7722-64-7', '7722-84-1', '90076-65-6']","['2-Propanol', 'Acetone', 'Bis(trifluoromethane)sulfonimide lithium salt', 'Hydrogen peroxide solution', 'Lithium', 'Lithium hexafluorophosphate solution', 'Potassium permanganate', 'Propylene carbonate', 'Sulfuric acid']"
+P351,9,Rinse cautiously with water for several minutes.,"['108-32-7', '21324-40-3', '67-63-0', '67-64-1', '7439-93-2', '7664-93-9', '7722-64-7', '7722-84-1', '90076-65-6']","['2-Propanol', 'Acetone', 'Bis(trifluoromethane)sulfonimide lithium salt', 'Hydrogen peroxide solution', 'Lithium', 'Lithium hexafluorophosphate solution', 'Potassium permanganate', 'Propylene carbonate', 'Sulfuric acid']"
+P338,9,"Remove contact lenses, if present and easy to do. Continue rinsing.","['108-32-7', '21324-40-3', '67-63-0', '67-64-1', '7439-93-2', '7664-93-9', '7722-64-7', '7722-84-1', '90076-65-6']","['2-Propanol', 'Acetone', 'Bis(trifluoromethane)sulfonimide lithium salt', 'Hydrogen peroxide solution', 'Lithium', 'Lithium hexafluorophosphate solution', 'Potassium permanganate', 'Propylene carbonate', 'Sulfuric acid']"
+P210,7,Keep away from heat/sparks/open flames/hot surfaces. No smoking.,"['105-58-8', '21324-40-3', '616-38-6', '623-53-0', '67-63-0', '67-64-1', '7722-64-7']","['2-Propanol', 'Acetone', 'Diethyl carbonate', 'Dimethyl carbonate', 'Ethyl methyl carbonate', 'Lithium hexafluorophosphate solution', 'Potassium permanganate']"
+P233,5,Keep container tightly closed.,"['105-58-8', '21324-40-3', '616-38-6', '67-63-0', '67-64-1']","['2-Propanol', 'Acetone', 'Diethyl carbonate', 'Dimethyl carbonate', 'Lithium hexafluorophosphate solution']"
+P301,1,IF SWALLOWED:,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P312,1,Call a POISON CENTER or doctor/physician if you feel unwell.,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P314,1,Get medical advice/attention if you feel unwell.,['21324-40-3'],['Lithium hexafluorophosphate solution']
+P223,1,"Keep away from any possible contact with water, because of violent reaction and possible flash fire.",['7439-93-2'],['Lithium']
+P231,1,Handle under inert gas.,['7439-93-2'],['Lithium']
+P232,1,Protect from moisture.,['7439-93-2'],['Lithium']
+P264,1,Wash skin thoroughly after handling.,['108-32-7'],['Propylene carbonate']
+P337,1,If eye irritation persists:,['108-32-7'],['Propylene carbonate']
+P313,1,Get medical advice/attention.,['108-32-7'],['Propylene carbonate']
+P240,4,Ground/bond container and receiving equipment.,"['105-58-8', '616-38-6', '67-63-0', '67-64-1']","['2-Propanol', 'Acetone', 'Diethyl carbonate', 'Dimethyl carbonate']"
+P241,4,Use explosion-proof electrical/ventilating/lighting/.../equipment.,"['105-58-8', '616-38-6', '67-63-0', '67-64-1']","['2-Propanol', 'Acetone', 'Diethyl carbonate', 'Dimethyl carbonate']"
+P242,4,Use only non-sparking tools.,"['105-58-8', '616-38-6', '67-63-0', '67-64-1']","['2-Propanol', 'Acetone', 'Diethyl carbonate', 'Dimethyl carbonate']"
+P243,2,Take precautionary measures against static discharge.,"['105-58-8', '616-38-6']","['Diethyl carbonate', 'Dimethyl carbonate']"
+P234,1,Keep only in original container.,['7664-93-9'],['Sulfuric acid']
+P363,1,Wash contaminated clothing before reuse.,['7664-93-9'],['Sulfuric acid']
+P501,1,Dispose of contents/container to ...,['7722-84-1'],['Hydrogen peroxide solution']
