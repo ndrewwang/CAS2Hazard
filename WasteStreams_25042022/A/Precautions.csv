@@ -1,0 +1,21 @@
+Code,Count,Statement,Assoc.CAS,Assoc.Chemical
+P210,1,Keep away from heat/sparks/open flames/hot surfaces. No smoking.,['7722-64-7'],['Potassium permanganate']
+P260,1,Do not breathe dust/fume/gas/mist/vapors/spray.,['7722-64-7'],['Potassium permanganate']
+P273,2,Avoid release to the environment.,"['7722-64-7', '7722-84-1']","['Hydrogen peroxide', 'Potassium permanganate']"
+P280,3,Wear protective gloves/protective clothing/eye protection/face protection.,"['7664-93-9', '7722-64-7', '7722-84-1']","['Hydrogen peroxide', 'Potassium permanganate', 'Sulfuric acid']"
+P303,2,IF ON SKIN (or hair):,"['7664-93-9', '7722-64-7']","['Potassium permanganate', 'Sulfuric acid']"
+P361,2,Remove/Take off immediately all contaminated clothing.,"['7664-93-9', '7722-64-7']","['Potassium permanganate', 'Sulfuric acid']"
+P353,2,Rinse skin with water/shower.,"['7664-93-9', '7722-64-7']","['Potassium permanganate', 'Sulfuric acid']"
+P305,3,IF IN EYES:,"['7664-93-9', '7722-64-7', '7722-84-1']","['Hydrogen peroxide', 'Potassium permanganate', 'Sulfuric acid']"
+P351,3,Rinse cautiously with water for several minutes.,"['7664-93-9', '7722-64-7', '7722-84-1']","['Hydrogen peroxide', 'Potassium permanganate', 'Sulfuric acid']"
+P338,3,"Remove contact lenses, if present and easy to do. Continue rinsing.","['7664-93-9', '7722-64-7', '7722-84-1']","['Hydrogen peroxide', 'Potassium permanganate', 'Sulfuric acid']"
+P234,1,Keep only in original container.,['7664-93-9'],['Sulfuric acid']
+P304,1,IF INHALED:,['7664-93-9'],['Sulfuric acid']
+P340,1,Remove victim to fresh air and keep at rest in a position comfortable for breathing.,['7664-93-9'],['Sulfuric acid']
+P310,1,Immediately call a POISON CENTER or doctor/physician.,['7664-93-9'],['Sulfuric acid']
+P363,1,Wash contaminated clothing before reuse.,['7664-93-9'],['Sulfuric acid']
+P261,1,Avoid breathing dust/fume/gas/mist/vapors/spray.,['7722-84-1'],['Hydrogen peroxide']
+P301,1,IF SWALLOWED:,['7722-84-1'],['Hydrogen peroxide']
+P312,1,Call a POISON CENTER or doctor/physician if you feel unwell.,['7722-84-1'],['Hydrogen peroxide']
+P302,1,IF ON SKIN:,['7722-84-1'],['Hydrogen peroxide']
+P352,1,Wash with plenty of soap and water.,['7722-84-1'],['Hydrogen peroxide']
